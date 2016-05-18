@@ -10,7 +10,8 @@ namespace Mpc.XFApp
             //MainPage = new MyPage();
             //MainPage = new XFListViewPage1();
             //MainPage = new XFListViewPage2();
-            MainPage = new XFListViewPage3();
+            //MainPage = new XFListViewPage3();
+            MainPage = new Pages.XFPage2();
         }
 
         protected override void OnResume()

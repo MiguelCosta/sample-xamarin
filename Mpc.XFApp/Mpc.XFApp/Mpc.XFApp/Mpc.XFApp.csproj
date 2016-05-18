@@ -41,6 +41,12 @@
     <Compile Include="MyPage.xaml.cs">
       <DependentUpon>MyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\XFPage1.xaml.cs">
+      <DependentUpon>XFPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\XFPage2.xaml.cs">
+      <DependentUpon>XFPage2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XFListViewPage3.cs" />
     <Compile Include="XFListViewPage2.cs" />
@@ -66,6 +72,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\XFPage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\XFPage2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
