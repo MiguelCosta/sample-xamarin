@@ -36,10 +36,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Layout\CourseCell.cs" />
+    <Compile Include="Models\Course.cs" />
     <Compile Include="MyPage.xaml.cs">
       <DependentUpon>MyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XFListViewPage3.cs" />
+    <Compile Include="XFListViewPage2.cs" />
     <Compile Include="XFListViewPage1.cs" />
   </ItemGroup>
   <ItemGroup>

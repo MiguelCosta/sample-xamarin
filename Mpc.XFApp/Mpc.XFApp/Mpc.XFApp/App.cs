@@ -8,7 +8,9 @@ namespace Mpc.XFApp
         {
             // The root page of your application
             //MainPage = new MyPage();
-            MainPage = new XFListViewPage1();
+            //MainPage = new XFListViewPage1();
+            //MainPage = new XFListViewPage2();
+            MainPage = new XFListViewPage3();
         }
 
         protected override void OnResume()
