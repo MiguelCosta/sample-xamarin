@@ -6,13 +6,7 @@ namespace Mpc.XFApp
     {
         public App()
         {
-            // The root page of your application
-            //MainPage = new MyPage();
-            //MainPage = new XFListViewPage1();
-            //MainPage = new XFListViewPage2();
-            //MainPage = new XFListViewPage3();
-            //MainPage = new Pages.XFPage2();
-            MainPage = new PagesCode.XFPage3();
+            MainPage = new NavigationPage(new PagesCode.HomePage());
         }
 
         protected override void OnResume()

@@ -41,6 +41,11 @@
     <Compile Include="MyPage.xaml.cs">
       <DependentUpon>MyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PagesCode\CourseMasterDetailDB.cs" />
+    <Compile Include="PagesCode\CourseMasterDetail.cs" />
+    <Compile Include="PagesCode\CoursePageDB.cs" />
+    <Compile Include="PagesCode\CoursePage.cs" />
+    <Compile Include="PagesCode\HomePage.cs" />
     <Compile Include="PagesCode\XFPage3.cs" />
     <Compile Include="Pages\XFPage1.xaml.cs">
       <DependentUpon>XFPage1.xaml</DependentUpon>

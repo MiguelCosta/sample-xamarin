@@ -10,7 +10,7 @@ namespace Mpc.XFApp
 
             var listView = new ListView();
             listView.ItemsSource = Models.Course.GetCourseList();
-
+            
             listView.ItemSelected += (sender, e) =>
             {
                 if(e.SelectedItem != null)

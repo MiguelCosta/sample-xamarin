@@ -6,21 +6,50 @@ namespace Mpc.XFApp.Models
     {
         public string Author { get; set; }
 
+        public string Description { get; set; }
+
         public string Title { get; set; }
 
+        public string TitleShort { get; set; }
         public static List<Course> GetCourseList()
         {
-            var courses = new List<Course>
+            var courseList = new List<Course>();
+            courseList.Add(new Course
             {
-                new Course { Author = "Miguel Costa", Title = "Apps with interactions that require native behavior" },
-                new Course { Author = "João Carvalho", Title = "Apps that require little platform-specific functionality" },
-                new Course { Author = "Miguel Costa", Title = "Xamarin.iOS & Xamarin.Android are best" },
-                new Course { Author = "Miguel Costa", Title = "Xamarin.Forms is best" },
-                new Course { Author = "João Carvalho", Title = "https://www.xamarin.com/forms" },
-                new Course { Author = "Nuno Antunes", Title = "What’s in the box" }
-            };
+                Title = "Building Cross Platform Apps with Xamarin Part 1",
+                TitleShort = "Xamarin 1",
+                Description = "Learn how to use Xamarin to leverage your skills in Microsoft Visual Studio " +
+                "and C# to build cross-platform apps that run on both Android and iOS.",
+                Author = "Jim Wilson"
+            });
+            courseList.Add(new Course
+            {
+                Title = "Building Cross Platform Apps with Xamarin Part 2",
+                TitleShort = "Xamarin 2",
+                Description = "Learn how to use Xamarin to leverage your skills in Microsoft Visual Studio " +
+                "and C# to build cross-platform apps that run on both Android and iOS, and embrace the features " +
+                "and capabilities of each platform.",
+                Author = "Jim Wilson"
+            });
+            courseList.Add(new Course
+            {
+                Title = "Building Google Glass Apps with c# and Xamarin",
+                TitleShort = "Xamarin Glass",
+                Description = "Learn to develop apps for Google Glass with C# and Xamarin by building a " +
+                "full-featured Scavenger Hunt game using the Xamarin Glass Development Kit component.",
+                Author = "Jim Wilson"
+            });
+            courseList.Add(new Course
+            {
+                Title = "Android for .NET Developers",
+                TitleShort = "Android",
+                Description = "This course provides an overview of the tools used in the Android development " +
+                "process including the newly released Android Studio. Topics are covered from the perspective of " +
+                "someone with .NET experience but are appropriate for anyone with software development experience",
+                Author = "Jim Wilson"
+            });
 
-            return courses;
+            return courseList;
         }
 
         public override string ToString()
