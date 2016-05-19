@@ -11,6 +11,12 @@ namespace Mpc.XFApp.PagesCode
             Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 0);
             Title = "Pages";
 
+            var label1 = new Label()
+            {
+                Text = Device.OnPlatform("iOS", "Android", "WindowsPhone"),
+                TextColor = Device.OnPlatform(Color.Blue, Color.Green, Color.Purple)
+            };
+
             var button1 = new Button { Text = "Simple Page" };
             button1.Clicked += (o, e) =>
             {
@@ -106,6 +112,7 @@ namespace Mpc.XFApp.PagesCode
                     Spacing = 10,
                     Children =
                     {
+                        label1,
                         button1,
                         button2,
                         button3,
