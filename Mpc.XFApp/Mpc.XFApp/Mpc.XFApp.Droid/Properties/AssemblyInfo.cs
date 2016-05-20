@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Mpc.XFApp.Droid")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
@@ -31,8 +31,12 @@ using System.Runtime.InteropServices;
 // Add some common permissions, these can be removed if not needed
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
-#if DEBUG
-[assembly: Application(Debuggable = true)]
-#else
-[assembly: Application(Debuggable=false)]
-#endif
+
+[assembly: UsesFeature("android.hardware.camera", Required = false)]
+[assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
+//#if DEBUG
+//[assembly: Application(Debuggable = true)]
+//#else
+//[assembly: Application(Debuggable=false)]
+//#endif
+
