@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="85930d70-750c-41a6-9b95-03faaed4159c" Publisher="CN=m.costa" Version="1.0.0.5" />
+  <Identity Name="85930d70-750c-41a6-9b95-03faaed4159c" Publisher="CN=m.costa" Version="1.0.0.8" />
   <Properties>
     <DisplayName>FPCL.Windows8.Windows</DisplayName>
     <PublisherDisplayName>Miguel Costa</PublisherDisplayName>
@@ -22,5 +22,6 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <DeviceCapability Name="webcam" />
   </Capabilities>
 </Package>
