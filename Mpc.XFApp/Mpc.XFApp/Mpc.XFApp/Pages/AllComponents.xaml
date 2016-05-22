@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mpc.XFApp.Pages.AllComponents"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <ScrollView>
+    <StackLayout Orientation="Vertical"
+                 Spacing="20"
+                 Padding="30">
+
+      <!-- ActivityIndicator -->
+      <ActivityIndicator IsRunning="True" />
+
+      <!-- BoxView -->
+      <BoxView Color="Red"
+               WidthRequest="100"
+               HeightRequest="100"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+      <!-- Button -->
+      <Button Text="Click Me"
+              BackgroundColor="Blue"
+              HorizontalOptions="Fill" />
+
+      <!-- DatePicker -->
+      <DatePicker VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
+        <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+        <DatePicker.MinimumDate>
+          <sys:DateTime x:FactoryMethod="Parse">
+            <x:Arguments>
+              <x:String>Jan 1 2000</x:String>
+            </x:Arguments>
+          </sys:DateTime>
+        </DatePicker.MinimumDate>
+        <DatePicker.MaximumDate>
+          <sys:DateTime x:FactoryMethod="Parse">
+            <x:Arguments>
+              <x:String>Dec 31 2050</x:String>
+            </x:Arguments>
+          </sys:DateTime>
+        </DatePicker.MaximumDate>
+      </DatePicker>
+
+      <!-- Editor -->
+      <Editor Text="Editor" />
+
+      <!-- Entry -->
+      <Entry Placeholder="Chat" Keyboard="Chat" />
+      <Entry Placeholder="Default" Keyboard="Default" />
+      <Entry Placeholder="Email" Keyboard="Email" />
+      <Entry Placeholder="Numeric" Keyboard="Numeric" />
+      <Entry Placeholder="Telephone" Keyboard="Telephone" />
+      <Entry Placeholder="Text" Keyboard="Text" />
+      <Entry Placeholder="Url" Keyboard="Url" />
+      <Entry Placeholder="Password" IsPassword="True" Keyboard="Url" />
+
+      <!-- Image -->
+      <Image xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+        <Image.Source>
+          <OnPlatform x:TypeArguments="ImageSource">
+            <OnPlatform.iOS>
+              <FileImageSource File="slblogo.png" />
+            </OnPlatform.iOS>
+            <OnPlatform.Android>
+              <FileImageSource File="slblogo.png" />
+            </OnPlatform.Android>
+            <OnPlatform.WinPhone>
+              <FileImageSource File="Assets/slblogo.png" />
+            </OnPlatform.WinPhone>
+          </OnPlatform>
+        </Image.Source>
+      </Image>
+
+      <!-- Label -->
+      <Label Text="Label" FontSize="Large" HorizontalOptions="Center" />
+
+      <!-- ListView -->
+
+      <!-- Picker -->
+      <Picker x:Name="ColumnPicker" Title="Picker">
+        <Picker.Items>
+          <x:String>Option 1</x:String>
+          <x:String>Option 2</x:String>
+          <x:String>Option 3</x:String>
+          <x:String>Option 4</x:String>
+        </Picker.Items>
+      </Picker>
+
+      <!-- ProgressBar -->
+      <ProgressBar Progress="0.7" />
+
+      <!-- SearchBar -->
+      <SearchBar Placeholder="Search" />
+
+      <!-- Slider -->
+      <Slider Value="20" Minimum="0" Maximum="30" />
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

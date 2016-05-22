@@ -111,6 +111,12 @@ namespace Mpc.XFApp.PagesCode
                 Navigation.PushAsync(new CameraPage());
             };
 
+            var button13 = new Button { Text = "All components" };
+            button13.Clicked += (o, e) =>
+            {
+                Navigation.PushAsync(new AllComponents());
+            };
+
             Content = new ScrollView()
             {
                 Content = new StackLayout
@@ -130,7 +136,8 @@ namespace Mpc.XFApp.PagesCode
                         button9,
                         button10,
                         button11,
-                        button12
+                        button12,
+                        button13
                     }
                 }
             };
