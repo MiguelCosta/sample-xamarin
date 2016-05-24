@@ -1,0 +1,58 @@
+﻿#header, #footer, #uvTab
+{
+    display: none !important;
+}
+.certificate
+{
+    position: relative;
+}
+.certificate img.background
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.certificate .content 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1454px;
+    height: 1135px;
+    padding-top: 300px;
+    text-align: center;
+}
+.certificate .content h1
+{
+    font-size: 100px;
+    color: #000;
+    margin-bottom: 30px;
+}
+.certificate .content h2
+{
+    font-size: 55px;
+    color: #000;
+    margin-bottom: 25px;
+}
+.certificate .content h3
+{
+    font-size: 75px;
+    color: #000;
+    margin-bottom: 25px;
+}
+.certificate .content h4
+{
+    font-size: 45px;
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.certificate .content p
+{
+    font-size: 30px;
+    color: #000;
+}
+
+body > div.wrap {
+    width: 1600px;
+}
