@@ -1,9 +1,4 @@
 ﻿using Plugin.Media;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Mpc.XFApp.PagesCode
@@ -19,13 +14,18 @@ namespace Mpc.XFApp.PagesCode
 
             var image = new Image();
 
+            var txtPath = new Entry()
+            {
+                Placeholder = "Path"
+            };
+
             takePhoto.Clicked += async (sender, args) =>
             {
                 await CrossMedia.Current.Initialize();
 
                 if(!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
                 {
-                    DisplayAlert("No Camera", ":( No camera available.", "OK");
+                    await DisplayAlert("No Camera", ":( No camera available.", "OK");
                     return;
                 }
 
@@ -38,19 +38,26 @@ namespace Mpc.XFApp.PagesCode
                 if(file == null)
                     return;
 
-                await DisplayAlert("File Location", file.Path, "OK");
+                MessagingCenter.Send<CameraPage, Plugin.Media.Abstractions.MediaFile>(this, "pictureTaken", file);
+            };
 
+            MessagingCenter.Subscribe<CameraPage, Plugin.Media.Abstractions.MediaFile>(this, "pictureTaken", (sender, arg) =>
+            {
+                txtPath.Text = arg.Path;
                 image.Source = ImageSource.FromStream(() =>
                 {
-                    var stream = file.GetStream();
-                    file.Dispose();
+                    var stream = arg.GetStream();
+                    arg.Dispose();
                     return stream;
                 });
-            };
+
+                // Not work in Windows 8.1
+                //image.Source = ImageSource.FromFile(arg.Path);
+            });
 
             Content = new StackLayout()
             {
-                Children = { takePhoto, image }
+                Children = { takePhoto, txtPath, image }
             };
         }
     }
