@@ -20,7 +20,7 @@ namespace Mpc.XFApp.Windows
         public MainPage()
         {
             this.InitializeComponent();
-
+            Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
             LoadApplication(new Mpc.XFApp.App());
         }
     }

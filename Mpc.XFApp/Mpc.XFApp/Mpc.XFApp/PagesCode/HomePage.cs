@@ -117,6 +117,12 @@ namespace Mpc.XFApp.PagesCode
                 Navigation.PushAsync(new AllComponents());
             };
 
+            var button14 = new Button { Text = "Maps" };
+            button14.Clicked += (o, e) =>
+            {
+                Navigation.PushAsync(new MapPage());
+            };
+
             Content = new ScrollView()
             {
                 Content = new StackLayout
@@ -137,7 +143,8 @@ namespace Mpc.XFApp.PagesCode
                         button10,
                         button11,
                         button12,
-                        button13
+                        button13,
+                        button14
                     }
                 }
             };

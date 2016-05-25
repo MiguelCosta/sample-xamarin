@@ -27,7 +27,7 @@ namespace Mpc.XFApp.WinPhone
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
-
+            Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
             LoadApplication(new Mpc.XFApp.App());
         }
 
