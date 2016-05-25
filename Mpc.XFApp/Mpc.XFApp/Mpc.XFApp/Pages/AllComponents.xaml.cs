@@ -14,5 +14,15 @@ namespace Mpc.XFApp.Pages
         {
             InitializeComponent();
         }
+
+        private void StepperValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            StepperValue.Text = $"{e.OldValue} TO {e.NewValue}";
+        }
+
+        private void SwitchChanged(object sender, ToggledEventArgs e)
+        {
+            SwitchValue.Text = $"Switch is now {e.Value}";
+        }
     }
 }
